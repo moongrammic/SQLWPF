@@ -1,0 +1,33 @@
+﻿<Window x:Class="WPFSQLL.View.Settings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewmodel="clr-namespace:WPFSQLL.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:SettingsViewModel}"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Settings" Height="116" Width="300" Style="{DynamicResource TitleStyle}">
+    <Grid Style="{DynamicResource GridStyle}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Заголовок -->
+        <TextBlock Style="{DynamicResource TextBlockStyle}" Text="Настройки темы" Grid.Row="0" Margin="10" HorizontalAlignment="Center" FontSize="24" FontWeight="Bold"/>
+
+        <!-- Кнопка "Светлая" -->
+        <Button  Style="{DynamicResource ButtonStyle}" Content="Светлая" Grid.Row="2"  HorizontalAlignment="Right" Width="100" Command="{Binding LightThemeCommand}" FontFamily="Segoe UI Black" FontSize="18" FontWeight="Bold" />
+
+        <!-- Кнопка "Темная" -->
+        <Button Style="{DynamicResource ButtonStyle}" Content="Темная" Grid.Row="2" HorizontalAlignment="Left" Width="100" Command="{Binding DarkThemeCommand}" FontFamily="Segoe UI Black" FontSize="18" FontWeight="Bold" />
+        
+        <Button Style="{DynamicResource ButtonStyle}" Content="Зеленая" Grid.Row="2" HorizontalAlignment="Center" Width="100" Command="{Binding GreenThemeCommand}" FontFamily="Segoe UI Black" FontSize="18" FontWeight="Bold" />
+        <!-- Кнопка "Назад" -->
+        <Button Style="{DynamicResource IconStyle1}" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Left" Command="{Binding BackCommand}" >
+            <Image Source="C:\Users\Memodel\Downloads\WPFSQLL (2)\WPFSQLL\WPFSQLL\Source\backwhite.png" Stretch="Fill"  />
+        </Button>
+    </Grid>
+</Window>
